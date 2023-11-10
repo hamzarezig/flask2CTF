@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 def isSafe(cmd):
-    blacklist = [' ', ';', '|', '&', '&&', '||']
+    blacklist = [' ', ';', '|', '&', '$', ')', '(']
     for i in blacklist:
         if i in cmd:
             return False
